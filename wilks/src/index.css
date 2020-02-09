@@ -7,6 +7,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url('barbell.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
 }
 
@@ -15,12 +17,16 @@ code {
     monospace;
 }
 
-.App {
+
+.AppCont{
   padding: 20px 20px 20px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .graph{
-  border-radius: 25px;
   display: flex;
   justify-content: center;
   padding-top: 20px;
@@ -39,4 +45,71 @@ code {
   flex-direction: column; 
   align-items: center; 
   justify-content: center;
+}
+
+.fixed{
+  left: 50%;
+}
+.weight-input{
+  position: absolute;
+  left: 31%;
+  top: 210px;
+}
+
+.kg{
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  top: 370px;
+  left: 27%;
+  background-color: black
+}
+
+.lbs{
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  top: 370px;
+  left: 35%;
+  background-color: black;
+}
+
+.lbs:hover{
+  opacity: 0.5;
+}
+
+.kg:hover{
+  opacity: 0.5;
+}
+
+.lift-input{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.lift-container{
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+
+}
+
+.standard{
+  border-radius: 15px;
+  margin: 5px;
+  width: 150;
+  height: 150;
+  background-color: white;
+}
+
+.calc{
+  border-radius: 20px;
+  padding: 20px;
+  background-color: gray;
+  font-size: 200%;
+}
+
+.calc:hover{
+  opacity: 0.5;
 }

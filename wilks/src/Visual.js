@@ -14,13 +14,13 @@ function Visual(props){
 
     let score = props.score;
     let newData = [
-        ['Level', 'Wilks Score'],
-        ['Untrained', 120],
-        ['Novice', 200],
-        ['Intermediate', 238],
-        ['Advanced', 326],
-        ['Elite', 414],
-        ['You', score]
+        ['Level', 'Wilks Score', { role: 'style' }],
+        ['Untrained', 120, 'blue'],
+        ['Novice', 200, 'blue'],
+        ['Intermediate', 238, 'blue'],
+        ['Advanced', 326, 'blue'],
+        ['Elite', 414, 'blue'],
+        ['You', score, 'gold']
     ];
     newData.sort(sort2);
 
@@ -33,6 +33,7 @@ function Visual(props){
             loader={<div>Loading Chart</div>}
             data={newData}
             options={{
+                legend: {position: 'none'},
                 title: 'Wilks Score by Level',
                 chartArea: { width: '50%' },
                 hAxis: {
